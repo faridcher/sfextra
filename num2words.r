@@ -1,10 +1,4 @@
-# This function converts numbers to their textual representation in Persian language
-# examples
-# num2words(c(0:20, 123, 123456, 12.123, 123.12345, 123456789, 12345678912345))
-# num2words(22.32, 'm^2')
-# num2words(.8, '')
-# num2words(5,c('m','cm'))
-# num2words(c(.8,.08,.83))
+# 
 num2words <- function(x, unit=c('m^2','dm^2'), dec_sep=ifelse(length(unit)==2, ' و ', ' ممیز ')) {
   yekan <- c("", "یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت", "نه" )
   dahyek <- c( "ده", "یازده", "دوازده", "سیزده", "چهارده", "پانزده", "شانزده", "هفده", "هجده", "نوزده" )
