@@ -1,0 +1,9 @@
+Package: futils
+Type: Package
+Title: Farid's utility functions
+Version: 1.0
+Date: 2024-07-21
+Author: Farid Cheraghi
+Maintainer: <faridcher@gmail.com>
+Description: Utility functions I could not find elsewhere so I implemented them myself. Now it only has a single function but will grow.
+License: GPL-2

@@ -1,4 +1,3 @@
-# 
 num2words <- function(x, unit=c('m^2','dm^2'), dec_sep=ifelse(length(unit)==2, ' و ', ' ممیز ')) {
   yekan <- c("", "یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت", "نه" )
   dahyek <- c( "ده", "یازده", "دوازده", "سیزده", "چهارده", "پانزده", "شانزده", "هفده", "هجده", "نوزده" )
@@ -63,4 +62,5 @@ num2words <- function(x, unit=c('m^2','dm^2'), dec_sep=ifelse(length(unit)==2, '
     wsu <- paste(ws[ws!=''], u, sep=' ')
     paste0(wsu, collapse=dec_sep)
   }
-})}
+})
+}
