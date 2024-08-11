@@ -52,7 +52,12 @@ Farid Cheraghi
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
+\url{https://pypi.org/project/num2fawords/}
+\url{https://github.com/mojtabaahn/php-persian-number-to-words}
+\url{https://coderanch.com/t/771776/java/convert-numbers-Persian-word}
+\url{https://stackoverflow.com/questions/31439604/how-to-convert-persian-and-arabic-digits-of-a-string-to-english-using-javascript}
 }
+
 \examples{
 num2words(22.32, 'm^2')
 num2words(.8, '')
