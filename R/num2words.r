@@ -14,20 +14,6 @@ num2words <- function(x, unit=c('m^2','dm^2'), dec_sep=ifelse(length(unit)==2, '
   # indices correspond to the len of decimal places
   dec_places <- c("دهم", "صدم", "هزارم", "ده هزارم","صد هزارم")
 
-  hundreds <- function(x){
-    s <- sadgan[x[3] + 1]
-    dhx <- dh[x[2] *  10 + x[1] + 1] 
-    paste(s, dhx , sep=ifelse(any(c(s, dhx)==""), "", " و "))
-  }
-  
-  int2words <- function(x){
-    # max n(umber) of digits is 14 (تریلیون)
-    n <- 1:15
-    d <- (as.numeric(x) %% 10^n) %/% 10^(n-1)
-    m <- matrix(d, ncol=3, byrow=T)
-    h <- apply(m, 1, hundreds)
-    paste0(rev(paste0(h[h!=""], base10[h!=""])), collapse=" و ")
-  }
   # unit translations
   ut <- c('m^2'='متر مربع', 'dm^2'='دسیمتر مربع', 'm'='متر', 'cm'='سانتیمتر')
 
@@ -45,7 +31,7 @@ num2words <- function(x, unit=c('m^2','dm^2'), dec_sep=ifelse(length(unit)==2, '
   # If units is a vector of two, the second units implies a min number of digits. For m-cm and sq m-dm are 2 and for kg-g is 3. Without converting 0.8 to 0.80, .08 and .8 become 'eight decimeters' because as.numeric(char) make them so.
   dc <- strsplit(x1, '\\.')[[1]]
   # words (ws) vector
-  ws <- sapply(dc, int2words)
+  ws <- sapply(dc, .int2words)
   # units and separators
   if(length(unit)==1){
     # 82.24 هشتاد و دو ممیز بیست و چهار صدم
@@ -63,4 +49,21 @@ num2words <- function(x, unit=c('m^2','dm^2'), dec_sep=ifelse(length(unit)==2, '
     paste0(wsu, collapse=dec_sep)
   }
 })
+}
+
+# called by int2words
+.hundreds <- function(x){
+    s <- sadgan[x[3] + 1]
+    dhx <- dh[x[2] *  10 + x[1] + 1] 
+    paste(s, dhx , sep=ifelse(any(c(s, dhx)==""), "", " و "))
+}
+
+# called from num2words
+.int2words <- function(x){
+    # max n(umber) of digits is 14 (تریلیون)
+    n <- 1:15
+    d <- (as.numeric(x) %% 10^n) %/% 10^(n-1)
+    m <- matrix(d, ncol=3, byrow=T)
+    h <- apply(m, 1, .hundreds)
+    paste0(rev(paste0(h[h!=""], base10[h!=""])), collapse=" و ")
 }
