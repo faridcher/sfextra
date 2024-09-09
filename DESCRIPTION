@@ -1,6 +1,6 @@
-Package: sfext
+Package: sfexttra
 Type: Package
-Title: sf extension
+Title: sf extra
 Version: 1.0
 Date: 2024-07-21
 Suggests: sf
