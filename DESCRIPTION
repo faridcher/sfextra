@@ -1,9 +1,10 @@
-Package: futils
+Package: sfext
 Type: Package
-Title: Farid's utility functions
+Title: sf extension
 Version: 1.0
 Date: 2024-07-21
+Suggests: sf
 Author: Farid Cheraghi
 Maintainer: <faridcher@gmail.com>
-Description: Utility functions I could not find elsewhere so I implemented them myself. Now it only has a single function but will grow.
+Description: Utility functions I could not find in sf so I implemented them myself.
 License: GPL-2
