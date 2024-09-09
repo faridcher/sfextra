@@ -1,14 +1,14 @@
-Utility functions I could not find elsewhere so I implemented them myself. Now it only has a single function but will grow!
+Utility functions I could not find in sf so I implemented them myself. 
 
 ## Install
 ```
-devtools::install('faridcher/futils')
+remotes::install('faridcher/sfext')
 ```
 
 ## Use
 ```r
-?num2words
+?st_azimuth
 ```
 
 # License
-GPL V3
+GPL V2
