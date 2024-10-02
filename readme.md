@@ -10,7 +10,7 @@ remotes::install('faridcher/sfextra')
 ?st_azimuth
 ```
 
-## Similiar projects
+## Related projects
 - [sfext](https://github.com/elipousson/sfext)
 - [sfx](https://github.com/seasmith/sfx)
 
