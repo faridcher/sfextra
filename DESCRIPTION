@@ -3,7 +3,7 @@ Type: Package
 Title: sf extra
 Version: 1.0
 Date: 2024-07-21
-Suggests: sf
+Imports: sf
 Author: Farid Cheraghi
 Maintainer: <faridcher@gmail.com>
 Description: Utility functions I could not find in sf so I implemented them myself.

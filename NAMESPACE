@@ -1,1 +1,3 @@
 export("st_azimuth")
+export("coords2segments")
+export("dup_mid_vertices")
