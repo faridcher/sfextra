@@ -2,7 +2,7 @@ Utility functions I could not find in sf so I implemented them myself.
 
 ## Install
 ```
-remotes::install('faridcher/sfextra')
+remotes::install_github('faridcher/sfextra')
 ```
 
 ## Use
