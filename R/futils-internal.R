@@ -1,6 +1,4 @@
-.First <-
-function () 
-{
+.First <- function () {
     if (interactive()) {
         invisible({
             lapply(c("utils", "colorout"), function(x) suppressMessages(library(x, 
@@ -14,9 +12,8 @@ function ()
     }
     source("~/code/r/lib.r")
 }
-.Last <-
-function () 
-{
+
+.Last <- function () {
     if (interactive()) {
         savehistory("~/.Rhistory")
         message(".Last ")
